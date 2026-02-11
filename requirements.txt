@@ -1,0 +1,26 @@
+# Recomendación para CUDA 12.6:
+
+#PyTorch con soporte CUDA 12.6 usando pip o conda (recomendado instalar torch aparte):
+#este funciona 11/02
+# pip (wheel oficial si está disponible):
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+#Verifica que detecte el cuda
+#python -c "import torch; print('CUDA disponible:', torch.cuda.is_available()); print('versión CUDA runtime:', torch.version.cuda); print('n GPUs:', torch.cuda.device_count())"
+
+
+# conda (si usas conda/miniconda):
+# conda install pytorch torchvision torchaudio pytorch-cuda=12.6 -c pytorch -c nvidia
+# Nota: si no hay wheel exacto cu126, consulta https://pytorch.org/get-started/locally/ para la rueda recomendada.
+# Se recomienda instalar `torch` con el comando anterior en lugar de fijar una rueda CUDA en este archivo.
+
+
+
+pandas>=1.5.0
+transformers>=4.34.0
+# torch>=2.0.0  # Instálalo por separado con el wheel CUDA (ver comentarios arriba)
+sentencepiece>=0.1.99
+tokenizers>=0.13.3
+tqdm>=4.64.0
+
+# Opcional (útil para despliegues y uso avanzado en HF):
+# accelerate>=0.20.3
