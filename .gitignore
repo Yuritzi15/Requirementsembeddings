@@ -116,4 +116,4 @@ Desktop.ini
 *.log
 
 # CSV or data dumps (optional)
-*.csv
+#*.csv
